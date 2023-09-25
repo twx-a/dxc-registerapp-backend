@@ -2,8 +2,7 @@ package com.dxc.codingassessment.backend.usertrackingapp.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
-
-import java.util.List;
+import java.util.Date;
 
 
 @Entity (name="users")
@@ -20,6 +19,8 @@ public class User {
 	@JsonIgnore
     private String password;
     private char manager;
+	@Column(name = "created_at")
+	private Date createdAt;
 
     //required for jpa to work correctly
     public User(){
@@ -66,7 +67,18 @@ public class User {
 	public void setManager(char manager) {
 		this.manager = manager;
 	}
-	
+	public Date getCreatedAt() {
+		return createdAt;
+	}
+
+	public void setCreatedAt(Date createdAt) {
+		this.createdAt = createdAt;
+	}
+	@PrePersist
+	public void onCreate() {
+		createdAt = new Date();
+	}
+
 	@Override
 	public String toString() {
 		return "User [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", email=" + email
