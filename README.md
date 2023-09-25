@@ -1,5 +1,15 @@
 # dxc-registerapp-backend
 basic register app.
+Bootstrapped using: https://start.spring.io/
+# Dependancies:
+Java version: JDK 17
+Springboot version: 3.1.4
+Tool: Maven
+Dependancies in pom.xml / added from " https://start.spring.io/ "
+1. Spring Web
+2. Spring Data JPA
+3. H2 Database
+4. Spring Security | this is commented out.
 Simple Documentation:
 
 How to use?
