@@ -34,5 +34,4 @@ Formats accepted for routes:
 This app is not secure. Spring security is not in place so passwords are stored in plain text via db.
 
 # todo
-Date of registration for users.
 Spring Security for passwords.
